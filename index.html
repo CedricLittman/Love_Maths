@@ -163,7 +163,7 @@
     </button>
 
     <br><b> Choose your favroite season: </b><br>  
-    <input type="radio" id="summer" value="Summer">Summer<br>   
+    <input type="radio" id="summer" value="Potato">Summer<br>   
     <input type="radio" id="winter" value="Winter">Winter<br>   
     <input type="radio" id="rainy" value="Rainy">Rainy<br>  
     <input type="radio" id="autumn" value="Autumn">Autumn<br><br>       
@@ -189,11 +189,11 @@
 
 
     <script>
+        let circlee = [0,0,0,0]
         function checkButton() {    
             if(document.getElementById('summer').checked) {   
                 document.getElementById("disp").innerHTML   
-                    = document.getElementById("summer").value   
-                    + " radio button is checked";   
+                    = circlee[1,0,0,0];   
             }   
             else if(document.getElementById('winter').checked) {   
                 document.getElementById("disp").innerHTML   
@@ -217,6 +217,14 @@
         }   
 
 
+
+
+
+
+
+
+
+        
 
         // function checkButton() {
         //     if (document.getElementById('e-red').checked) {
