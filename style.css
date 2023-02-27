@@ -33,7 +33,6 @@ xy-center {
 #circleb {
   height: 100px;
   width: 100px;
-  /* background-color: #008000; */
   border-radius: 50%;
 }
 
@@ -45,19 +44,14 @@ xy-center {
 
 
 #circled {
-
   height: 100px;
   width: 100px;
-  /* background-color: #ff7f50; */
   border-radius: 50%;
 }
 
 #circlee {
-
   height: 100px;
   width: 100px;
-  /* background-color: #ffffff; */
   border-radius: 50%;
-
 }
 

@@ -1,19 +1,27 @@
 // #9FA6B2 Background colour  https://mdbootstrap.com/docs/standard/content-styles/colors/
 
-
+// function runGame() {
 var endLoop = false;
+var score = 0;
+var start = 0;
 
 
 // Do not allow guesses until colours have disappeared
 function allowGuesses() {
 
 }
+// Make question buttons invisible while cicles visible
+document.getElementById("displayButtonA").style.visibility = "hidden";
+document.getElementById("displayButtonB").style.visibility = "hidden";
+document.getElementById("displayButtonC").style.visibility = "hidden";
+document.getElementById("displayButtonD").style.visibility = "hidden";
+document.getElementById("displayButtonE").style.visibility = "hidden";
 
-// setTimeout(myFunction, 5000);
 
 // Collect guesses for circle colours
 let circlea = [0, 0, 0, 0, 0, 0];
 let coloura = 0;
+
 function checkButtona() {
     if (document.getElementById('a-red').checked) {
         circlea = [1, 0, 0, 0, 0, 0];
@@ -38,13 +46,11 @@ function checkButtona() {
     } else {
         circlea = [0, 0, 0, 0, 0, 1];
     }
-    // alert("Displayed colours - circlea " + circlea[0] + "  " + circlea[1] + "   " + circlea[2] + "  " + circlea[3] + "   " +
-    //     circlea[4] + "  " + circlea[5]);
-    alert("coloura = " + coloura);
 }
 
 let circleb = [0, 0, 0, 0, 0, 0];
-let colourb =0;
+let colourb = 0;
+
 function checkButtonb() {
     if (document.getElementById('b-red').checked) {
         circleb = [1, 0, 0, 0, 0, 0];
@@ -69,12 +75,11 @@ function checkButtonb() {
     } else {
         circleb = [0, 0, 0, 0, 0, 1];
     }
-    // alert("Displayed colours - circleb " + circleb[0] + "  " + circleb[1] + "   " + circleb[2] + "  " + circleb[3] + "   " +
-    //     circleb[4] + "  " + circleb[5]);
 }
 
 let circlec = [0, 0, 0, 0, 0, 0];
 let colourc = 0;
+
 function checkButtonc() {
     if (document.getElementById('c-red').checked) {
         circlec = [1, 0, 0, 0, 0, 0];
@@ -99,13 +104,12 @@ function checkButtonc() {
     } else {
         circlec = [0, 0, 0, 0, 0, 1];
     }
-    // alert("Displayed colours - circlec " + circlec[0] + "  " + circlec[1] + "   " + circlec[2] + "  " + circlec[3] + "   " +
-    //     circlec[4] + "  " + circlec[5]);
 }
 
 
 let circled = [0, 0, 0, 0, 0, 0];
 let colourd = 0;
+
 function checkButtond() {
     if (document.getElementById('d-red').checked) {
         circled = [1, 0, 0, 0, 0, 0];
@@ -130,12 +134,11 @@ function checkButtond() {
     } else {
         circled = [0, 0, 0, 0, 0, 1];
     }
-    //     alert("Displayed colours - circled " + circled[0] + "  " + circled[1] + "   " + circled[2] + "  " + circled[3] + "   " +
-    //         circled[4] + "  " + circled[5]);
 }
 
 let circlee = [0, 0, 0, 0, 0, 0];
 let coloure = 0;
+
 function checkButtone() {
     if (document.getElementById('e-red').checked) {
         circlee = [1, 0, 0, 0, 0, 0];
@@ -161,8 +164,6 @@ function checkButtone() {
         circlee = [0, 0, 0, 0, 0, 1];
         // document.getElementById("error").innerHTML = "You have not selected any season";
     }
-     // alert("Displayed colours - circlee " + circlee[0] + "  " + circlee[1] + "   " + circlee[2] + "  " + circlee[3] + "   " +
-     //    circlee[4] + "  " + circlee[5]);
 }
 
 
@@ -238,20 +239,19 @@ if (counte < 2) {
 }
 
 let generatedColours = [counta, countb, countc, countd, counte];
-//  alert("counta: " + counta + " countb: " + countb + " countc: " + countc + " countd: " + countd + " counte: " + counte);
 
 // Compare generated colours with answers
 // First check all colours guessed
 
-function checkSubmitButton()  {
+function checkSubmitButton() {
     checkButtona();
     checkButtonb();
     checkButtonc();
     checkButtond();
     checkButtone();
 
-// Have all entries been completed?
-let completeAllEntries = 0;
+    // Have all entries been completed?
+    let completeAllEntries = 0;
     if (circlea[5] == 1) {
         completeAllEntries = 1;
     } else if (circleb[5] == 1) {
@@ -264,35 +264,40 @@ let completeAllEntries = 0;
         completeAllEntries = 1;
     } else completeAllEntries = 0;
     if (completeAllEntries == 1) {
-        document.getElementById("allGuessesMade").innerHTML = "Try Again You Must Guess All Colours!";
+        document.getElementById("allGuessesMade").innerHTML = "Try Again - You Must Guess ALL Colours!";
     } else completeAllEntries = 0;
 
-    let evaluateGuesses = 
-(coloura === counta) && 
-(colourb === countb) &&   
-(colourc === countc) && 
-(colourd === countd) && 
-(coloure === counte);
+    let evaluateGuesses =
+        (coloura === counta) &&
+        (colourb === countb) &&
+        (colourc === countc) &&
+        (colourd === countd) &&
+        (coloure === counte);
 
-alert("Evaluation  of guesses is  "+evaluateGuesses);
+    alert("Evaluation  of guesses is  " + evaluateGuesses);
+    if (score == 0) {
+        document.getElementById("score").innerHTML = score++
+    } else if (evaluateGuesses == 0) {
+        document.getElementById("allGuessesMade").innerHTML = "You LOSE!"
+    } else if (evaluateGuesses == 1) {
+        document.getElementById("score").innerHTML = score++;
+    }
 
 }
 
-// Compare guesses with generated colours
-function areGuessesCorrect () {
 
+function greyCircles() {
+    document.getElementById('circlea').style.backgroundColor = document.getElementById('circleb').style.backgroundColor = document.getElementById('circlec').style.backgroundColor = document.getElementById('circled').style.backgroundColor = document.getElementById('circlee').style.backgroundColor = "gray";
+    document.getElementById("displayButtonA").style.visibility = "visible";
+    document.getElementById("displayButtonB").style.visibility = "visible";
+    document.getElementById("displayButtonC").style.visibility = "visible";
+    document.getElementById("displayButtonD").style.visibility = "visible";
+    document.getElementById("displayButtonE").style.visibility = "visible";
 }
+setTimeout(greyCircles, 5000);
 
-function myFunction() {
-     document.getElementById('circlea').style.backgroundColor = document.getElementById('circleb').style.backgroundColor = document.getElementById('circlec').style.backgroundColor = document.getElementById('circled').style.backgroundColor = document.getElementById('circlee').style.backgroundColor = "gray";
- }
-setTimeout(myFunction, 5000);
+start = 1;
+//     if (evaluateGuesses == true) runGame();
+// }
 
-
-
-
-// Now compare guesses with circle colours
-
-
-
-// alert("counta = " + counta + "    coloura = " + coloura + "    countb = " + countb + "    colourb = " + colourb);
+// runGame();

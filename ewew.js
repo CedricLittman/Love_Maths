@@ -14,6 +14,8 @@ var countc;
 var countd;
 var counte;
 
+var loop
+
 // Have all entries been completed?
 var completeAllEntries = 0;
 
