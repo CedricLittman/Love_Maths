@@ -2,6 +2,10 @@
 </style>font-family: 'EB Garamond',
 serif; */
 
+#allGuessesMade {
+  color: red;
+  font-weight: bold;
+}
 
 .background {
   border: 5px solid;

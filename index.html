@@ -12,15 +12,15 @@
     <title>Document</title>
 </head>
 
+
 <body>
     <div class="container-fluid background">
         <div class="row">
             <h1>
                 Score: <span id="score">0</span>
-                <span><button type="button" onclick="checkButtona(); checkButtonb(); checkButtonc(); checkButtond(); checkButtone()"
-                        class="btn btn-lge btn-danger">SUBMIT</button>
-
+                <span><button type="button" onclick="checkSubmitButton()" class="btn btn-lge btn-danger">SUBMIT</button>
                 </span>
+                <span id="allGuessesMade"><h1></h1></span>
             </h1>
             <hr>
 
@@ -77,7 +77,6 @@
         </div>
         <hr />
 
-        <!-- <div class="container"> -->
         <div class="row">
             <div class="col d-flex my-auto justify-content-center">
                 <div id="circlec"></div>
@@ -101,10 +100,8 @@
                 </div>
             </div>
         </div>
-        <!-- </div> -->
         <hr />
 
-        <!-- <div class="container"> -->
         <div class="row">
             <div class="col d-flex my-auto justify-content-center">
                 <div id="circled"></div>
@@ -128,10 +125,8 @@
                 </div>
             </div>
         </div>
-        <!-- </div> -->
         <hr />
 
-        <!-- <div class="container"> -->
         <div class="row">
             <div class="col d-flex my-auto justify-content-center">
                 <div id="circlee"></div>
@@ -154,7 +149,6 @@
                     <label class="btn btn-outline-success" for="e-green">Green</label>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 
@@ -165,160 +159,19 @@
 
 
 
-    <br><b> Choose your favroite season: </b><br>
-    <input type="radio" id="summer" value="Potato">Summer<br>
-    <input type="radio" id="winter" value="Winter">Winter<br>
-    <input type="radio" id="rainy" value="Rainy">Rainy<br>
-    <input type="radio" id="autumn" value="Autumn">Autumn<br><br>
-
-    <button type="button" onclick="checkButtond()"> Submit </button>
-
-    <h3 id="disp" style="color:green"> </h3>
-    <h4 id="error" style="color:red"> </h4>
-
-
 
 
 
     <script>
-
-let circlea = [0, 0, 0, 0, 0, 0];
         
-        function checkButtona() {
-            if (document.getElementById('a-red').checked) {
-                circlea = [1, 0, 0, 0, 0, 0];
-                                
-            } else if (document.getElementById('a-white').checked) {
-                circlea = [0, 1, 0, 0, 0, 0];
-                
-            } else if (document.getElementById('a-yellow').checked) {
-                circlea = [0, 0, 1, 0, 0, 0];
-                                    
-            } else if (document.getElementById('a-black').checked) {
-                circlea = [0, 0, 0, 1, 0, 0];
-               
-               }   else if (document.getElementById('a-green').checked) {
-                circlea = [0, 0, 0, 0, 1, 0];
-
-            } else {
-                circlea = [0, 0, 0, 0, 0, 1];
-            }
-            alert("circlea " +circlea[0]+"  "+circlea[1]+"   "+circlea[2]+"  "+circlea[3]+"   "+circlea[4]+"  "+circlea[5]);
-        }  
-
-        let circleb = [0, 0, 0, 0, 0, 0];
-
-        function checkButtonb() {
-            if (document.getElementById('b-red').checked) {
-                circleb = [1, 0, 0, 0, 0, 0];
-
-            } else if (document.getElementById('b-white').checked) {
-                circleb = [0, 1, 0, 0, 0, 0];
-
-            } else if (document.getElementById('b-yellow').checked) {
-                circleb = [0, 0, 1, 0, 0, 0];
-
-            } else if (document.getElementById('b-black').checked) {
-                circleb = [0, 0, 0, 1, 0, 0];
-
-            } else if (document.getElementById('b-green').checked) {
-                circleb = [0, 0, 0, 0, 1, 0];
-
-            } else {
-                circleb = [0, 0, 0, 0, 0, 1];
-            }
-            alert("circleb " + circleb[0] + "  " + circleb[1] + "   " + circleb[2] + "  " + circleb[3] + "   " +
-                circleb[4] + "  " + circleb[5]);
-        }
-
-        let circlec = [0, 0, 0, 0, 0, 0];
-
-        function checkButtonc() {
-            if (document.getElementById('c-red').checked) {
-                circlec = [1, 0, 0, 0, 0, 0];
-
-            } else if (document.getElementById('c-white').checked) {
-                circlec = [0, 1, 0, 0, 0, 0];
-
-            } else if (document.getElementById('c-yellow').checked) {
-                circlec = [0, 0, 1, 0, 0, 0];
-
-            } else if (document.getElementById('c-black').checked) {
-                circlec = [0, 0, 0, 1, 0, 0];
-
-            } else if (document.getElementById('c-green').checked) {
-                circlec = [0, 0, 0, 0, 1, 0];
-
-            } else {
-                circlec = [0, 0, 0, 0, 0, 1];
-            }
-            alert("circlec " + circlec[0] + "  " + circlec[1] + "   " + circlec[2] + "  " + circlec[3] + "   " +
-                circlec[4] + "  " + circlec[5]);
-        }
 
 
-        let circled = [0, 0, 0, 0, 0, 0];
-
-        function checkButtond() {
-            if (document.getElementById('d-red').checked) {
-                circled = [1, 0, 0, 0, 0, 0];
-
-            } else if (document.getElementById('d-white').checked) {
-                circled = [0, 1, 0, 0, 0, 0];
-
-            } else if (document.getElementById('d-yellow').checked) {
-                circled = [0, 0, 1, 0, 0, 0];
-
-            } else if (document.getElementById('d-black').checked) {
-                circled = [0, 0, 0, 1, 0, 0];
-
-            } else if (document.getElementById('d-green').checked) {
-                circled = [0, 0, 0, 0, 1, 0];
-
-            } else {
-                circled = [0, 0, 0, 0, 0, 1];
-            }
-            alert("circled " + circled[0] + "  " + circled[1] + "   " + circled[2] + "  " + circled[3] + "   " +
-                circled[4] + "  " + circled[5]);
-        }
-
-
-
-        let circlee = [0, 0, 0, 0, 0, 0];
-
-        function checkButtone() {
-            if (document.getElementById('e-red').checked) {
-                circlee = [1, 0, 0, 0, 0, 0];
-                // document.getElementById("disp").innerHTML = document.getElementById("summer").value +
-                //     " radio button is checked";
-
-
-            } else if (document.getElementById('e-white').checked) {
-                circlee = [0, 1, 0, 0, 0, 0];
-                // document.getElementById("disp").innerHTML = document.getElementById("winter").value +
-                //     " radio button is checked";
-
-            } else if (document.getElementById('e-yellow').checked) {
-                circlee = [0, 0, 1, 0, 0, 0];
-                // document.getElementById("disp").innerHTML = document.getElementById("rainy").value +
-                //     " radio button is checked";
-
-            } else if (document.getElementById('e-black').checked) {
-                circlee = [0, 0, 0, 1, 0, 0];
-                // document.getElementById("disp").innerHTML = document.getElementById("autumn").value +
-                //     " radio button is checked";
-
-            } else if (document.getElementById('e-green').checked) {
-                circlee = [0, 0, 0, 0, 1, 0];
-
-            } else {
-                circlee = [0, 0, 0, 0, 0, 1];
-                // document.getElementById("error").innerHTML = "You have not selected any season";
-            }
-            alert("circlee " + circlee[0] + "  " + circlee[1] + "   " + circlee[2] + "  " + circlee[3] + "   " +
-                circlee[4] + "  " + circlee[5]);
-        }
+      
     </script>
+
+
+
+
 
 
 
