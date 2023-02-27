@@ -1,11 +1,15 @@
 // #9FA6B2 Background colour  https://mdbootstrap.com/docs/standard/content-styles/colors/
 
 
-
-// Submit button function        
-
+var endLoop = false;
 
 
+// Do not allow guesses until colours have disappeared
+function allowGuesses() {
+
+}
+
+// setTimeout(myFunction, 5000);
 
 // Collect guesses for circle colours
 let circlea = [0, 0, 0, 0, 0, 0];
@@ -233,32 +237,21 @@ if (counte < 2) {
     document.getElementById('circlee').style.backgroundColor = "green"
 }
 
-let colours = [counta, countb, countc, countd, counte];
+let generatedColours = [counta, countb, countc, countd, counte];
 //  alert("counta: " + counta + " countb: " + countb + " countc: " + countc + " countd: " + countd + " counte: " + counte);
 
 // Compare generated colours with answers
 // First check all colours guessed
 
-function checkSubmitButton() {
+function checkSubmitButton()  {
     checkButtona();
     checkButtonb();
     checkButtonc();
     checkButtond();
     checkButtone();
-    allGuessesMade()
-}
-
-
-
-
-function myFunction() {
-    document.getElementById('circlea').style.backgroundColor = document.getElementById('circleb').style.backgroundColor = document.getElementById('circlec').style.backgroundColor = document.getElementById('circled').style.backgroundColor = document.getElementById('circlee').style.backgroundColor = "gray";
-}
-setTimeout(myFunction, 5000);
 
 // Have all entries been completed?
 let completeAllEntries = 0;
-function allGuessesMade() {
     if (circlea[5] == 1) {
         completeAllEntries = 1;
     } else if (circleb[5] == 1) {
@@ -273,9 +266,33 @@ function allGuessesMade() {
     if (completeAllEntries == 1) {
         document.getElementById("allGuessesMade").innerHTML = "Try Again You Must Guess All Colours!";
     } else completeAllEntries = 0;
+
+    let evaluateGuesses = 
+(coloura === counta) && 
+(colourb === countb) &&   
+(colourc === countc) && 
+(colourd === countd) && 
+(coloure === counte);
+
+alert("Evaluation  of guesses is  "+evaluateGuesses);
+
 }
 
+// Compare guesses with generated colours
+function areGuessesCorrect () {
+
+}
+
+function myFunction() {
+     document.getElementById('circlea').style.backgroundColor = document.getElementById('circleb').style.backgroundColor = document.getElementById('circlec').style.backgroundColor = document.getElementById('circled').style.backgroundColor = document.getElementById('circlee').style.backgroundColor = "gray";
+ }
+setTimeout(myFunction, 5000);
+
+
+
+
 // Now compare guesses with circle colours
-// function evaluateGuesses ()
+
+
 
 // alert("counta = " + counta + "    coloura = " + coloura + "    countb = " + countb + "    colourb = " + colourb);
