@@ -1,68 +1,75 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0;
-    margin: 0;
-    background-color: coral;
+/* <style>@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,800&display=swap');
+</style>font-family: 'EB Garamond',
+serif; */
 
-   }
-    
-   #game-frame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: solid 1px;
-   }
-    
-   #my-title {
-    font-size: 3rem;
-    text-transform: uppercase;
-    border: dotted;
-   }
-    
-   button {
-    width: 160px;
-    border-radius: 20px;
-    height: 1.5 rem;
-    padding: 10px;
-    font-size: xx-large;
-    color: white;
-   }
-    
-   #btn-plus {
-    background-color: green;
-   }
-    
-   #btn-minus {
-    background-color: orange;
-   }
-    
-   #btn-submit {
-    background-color: black;
-   }
-    
-   #question-holder, #answer-holder {
-    background-color: white;
-    color: black;
-    width: 300px;
-    font-size: xx-large;
-   }
-    
-   .score-headings {
-    display: flex;
-   }
-    
-   .score-values {
-    display: flex;
-   }
-    
-   .score-headings p {
-    font-size: x-large;
-    margin: 40px;
-   }
-    
-   .score-values p {
-    font-size: x-large;
-    margin: 40px;
-   }
+h1 {
+  color: red;
+  font-weight: bold;
+}
+
+.background {
+  border: 5px solid;
+  width: 66%;
+  padding: 10px;
+  background-color: #9FA6B2;
+}
+
+xy-center {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+  align-items: center
+}
+
+#circlea {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  }
+
+#circleb {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#circlec {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#circled {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#circlee {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.question-mark {
+  font-size: 50px;
+}
+
+i {
+  animation: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

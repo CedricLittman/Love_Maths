@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <title>Document</title>
@@ -18,12 +18,14 @@
     <div class="container-fluid background">
         <div class="row">
             <h1>
-                Score: <span id="score"></span>
-                <span><button type="button" onclick="checkSubmitButton()" class="btn btn-lge btn-danger">SUBMIT</button>
+                <span id="score"></span>
+                <span id="submit"><button type="button" onclick="checkSubmitButton()" class="btn btn-lge btn-danger">SUBMIT</button>
                 </span>
                 <span id="allGuessesMade">
                     <h1></h1>
                 </span>
+                <span id="instructions">REMEMBER THE COLOURS</span>
+                <span id="instructions2">WHAT WERE THE COLOURS?</span>
             </h1>
             <hr>
 
@@ -157,32 +159,10 @@
 
 
 
-
-
-
-
-
-
-
-
-    <script>
-
-
-
-
-    </script>
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="logic.js"></script>
+    <script src="./assets/js/logic.js"></script>
 </body>
 
 </html>

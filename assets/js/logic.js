@@ -1,12 +1,3 @@
-// #9FA6B2 Background colour  https://mdbootstrap.com/docs/standard/content-styles/colors/
-
-// function runGame() {
-var endLoop = false;
-var score = 0;
-var start = 0;
-
-
-
 // Make question buttons invisible while cicles visible
 document.getElementById("displayButtonA").style.visibility = "hidden";
 document.getElementById("displayButtonB").style.visibility = "hidden";
@@ -14,7 +5,14 @@ document.getElementById("displayButtonC").style.visibility = "hidden";
 document.getElementById("displayButtonD").style.visibility = "hidden";
 document.getElementById("displayButtonE").style.visibility = "hidden";
 
-//   document.getElementsByClassName("question-mark").style.visibility = "hidden";
+// Make instructions visible and invisible as appropriate
+document.getElementById("instructions").style.visibility = "visible";
+document.getElementById("instructions2").style.visibility = "hidden";
+
+// Make submit button invisible while coloured circles are visible
+document.getElementById("submit").style.visibility = "hidden";
+
+//   document.getElementsByClassName("question-mark").style.visibility = "hidden"; Introduced Bootstrap question mark, needs work
 document.getElementById("circlea").innerHTML = ""
 
 // Collect guesses for circle colours
@@ -162,7 +160,6 @@ function checkButtone() {
 
     } else {
         circlee = [0, 0, 0, 0, 0, 1];
-        // document.getElementById("error").innerHTML = "You have not selected any season";
     }
 }
 
@@ -284,15 +281,9 @@ function checkSubmitButton() {
     }
     
     
-    
-    alert("completeAllEntries   " + completeAllEntries);
-
-
-    alert("Evaluation  of guesses is  " + evaluateGuesses);
-
-    
 }
 
+// Change visibility of greyCircles, buttons, instructions and submit button
 var displayOn = 1
 function greyCircles() {
     document.getElementById('circlea').style.backgroundColor = 
@@ -309,8 +300,16 @@ function greyCircles() {
     document.getElementById("displayButtonD").style.visibility = "visible";
     document.getElementById("displayButtonE").style.visibility = "visible";
 
+    document.getElementById("submit").style.visibility = "visible";
+
+    document.getElementById("instructions").style.visibility = "hidden";
+    document.getElementById("instructions2").style.visibility = "visible";
+
+    // document.getElementById("allGuessesMade").innerHTML = "REMEMBER THE COLOURS";
+
     displayOn = 0;
 }
 setTimeout(greyCircles, 5000);
+
 
 
