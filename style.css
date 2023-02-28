@@ -12,7 +12,6 @@ serif; */
   width: 66%;
   padding: 10px;
   background-color: #9FA6B2;
-
 }
 
 xy-center {
@@ -23,12 +22,11 @@ xy-center {
   align-items: center
 }
 
-
 #circlea {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-}
+  }
 
 #circleb {
   height: 100px;
@@ -42,7 +40,6 @@ xy-center {
   border-radius: 50%;
 }
 
-
 #circled {
   height: 100px;
   width: 100px;
@@ -55,3 +52,24 @@ xy-center {
   border-radius: 50%;
 }
 
+.question-mark {
+  font-size: 50px;
+}
+
+i {
+  animation: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

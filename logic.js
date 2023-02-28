@@ -14,6 +14,8 @@ document.getElementById("displayButtonC").style.visibility = "hidden";
 document.getElementById("displayButtonD").style.visibility = "hidden";
 document.getElementById("displayButtonE").style.visibility = "hidden";
 
+//   document.getElementsByClassName("question-mark").style.visibility = "hidden";
+document.getElementById("circlea").innerHTML = ""
 
 // Collect guesses for circle colours
 let circlea = [0, 0, 0, 0, 0, 0];
@@ -276,7 +278,7 @@ function checkSubmitButton() {
          if (completeAllEntries == 1) {
         document.getElementById("allGuessesMade").innerHTML = "Try Again - You Must Guess ALL Colours!";
     } else if (evaluateGuesses == true) {
-        document.getElementById("allGuessesMade").innerHTML = "WELL DONE!";
+        document.getElementById("allGuessesMade").innerHTML = "YOU WIN --- WELL DONE!";
     } else {
         document.getElementById("allGuessesMade").innerHTML = "YOU LOSE! TRY AGAIN"
     }
@@ -298,6 +300,8 @@ function greyCircles() {
     document.getElementById('circlec').style.backgroundColor = 
     document.getElementById('circled').style.backgroundColor = 
     document.getElementById('circlee').style.backgroundColor = "gray";
+    document.getElementById("circlea").style.visibility = "visible";
+
 
     document.getElementById("displayButtonA").style.visibility = "visible";
     document.getElementById("displayButtonB").style.visibility = "visible";
@@ -309,11 +313,4 @@ function greyCircles() {
 }
 setTimeout(greyCircles, 5000);
 
-if (displayOn == 0) {
-    questionMark();
-}
 
-function questionMark() {
-    getElementById("circlea").style.backgroundimage = "./question_mark.png";
-    alert("displayOn  = " + displayOn);
-}
