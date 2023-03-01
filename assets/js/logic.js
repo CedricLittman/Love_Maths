@@ -1,3 +1,4 @@
+
 // Make question buttons invisible while cicles visible
 document.getElementById("displayButtonA").style.visibility = "hidden";
 document.getElementById("displayButtonB").style.visibility = "hidden";
@@ -13,11 +14,11 @@ document.getElementById("instructions2").style.visibility = "hidden";
 document.getElementById("submit").style.visibility = "hidden";
 
 //   document.getElementsByClassName("question-mark").style.visibility = "hidden"; Introduced Bootstrap question mark, needs work
-document.getElementById("circlea").innerHTML = ""
+document.getElementById("circlea").innerHTML = "";
 
 // Collect guesses for circle colours
-let circlea = [0, 0, 0, 0, 0, 0];
-let coloura = 0;
+var circlea = [0, 0, 0, 0, 0, 0];
+var coloura = 0;
 
 function checkButtona() {
     if (document.getElementById('a-red').checked) {
@@ -46,8 +47,8 @@ function checkButtona() {
 }
 
 
-let circleb = [0, 0, 0, 0, 0, 0];
-let colourb = 0;
+var circleb = [0, 0, 0, 0, 0, 0];
+var colourb = 0;
 
 function checkButtonb() {
     if (document.getElementById('b-red').checked) {
@@ -75,8 +76,8 @@ function checkButtonb() {
     }
 }
 
-let circlec = [0, 0, 0, 0, 0, 0];
-let colourc = 0;
+var circlec = [0, 0, 0, 0, 0, 0];
+var colourc = 0;
 
 function checkButtonc() {
     if (document.getElementById('c-red').checked) {
@@ -104,9 +105,8 @@ function checkButtonc() {
     }
 }
 
-
-let circled = [0, 0, 0, 0, 0, 0];
-let colourd = 0;
+var circled = [0, 0, 0, 0, 0, 0];
+var colourd = 0;
 
 function checkButtond() {
     if (document.getElementById('d-red').checked) {
@@ -134,8 +134,8 @@ function checkButtond() {
     }
 }
 
-let circlee = [0, 0, 0, 0, 0, 0];
-let coloure = 0;
+var circlee = [0, 0, 0, 0, 0, 0];
+var coloure = 0;
 
 function checkButtone() {
     if (document.getElementById('e-red').checked) {
@@ -163,79 +163,75 @@ function checkButtone() {
     }
 }
 
-
-
 // Generate random colours
-let counta = Math.floor(Math.random() * 5) + 1;
+var counta = Math.floor(Math.random() * 5) + 1;
 if (counta < 2) {
-    document.getElementById('circlea').style.backgroundColor = "red"
+    document.getElementById('circlea').style.backgroundColor = "red";
 } else if (counta < 3) {
     document.getElementById('circlea').style.backgroundColor = "white";
 } else if (counta < 4) {
-    document.getElementById('circlea').style.backgroundColor = "yellow"
+    document.getElementById('circlea').style.backgroundColor = "yellow";
 } else if (counta < 5) {
-    document.getElementById('circlea').style.backgroundColor = "black"
+    document.getElementById('circlea').style.backgroundColor = "black";
 } else {
-    document.getElementById('circlea').style.backgroundColor = "green"
+    document.getElementById('circlea').style.backgroundColor = "green";
 }
 
 
-let countb = Math.floor(Math.random() * 5) + 1;
+var countb = Math.floor(Math.random() * 5) + 1;
 if (countb < 2) {
-    document.getElementById('circleb').style.backgroundColor = "red"
+    document.getElementById('circleb').style.backgroundColor = "red";
 } else if (countb < 3) {
     document.getElementById('circleb').style.backgroundColor = "white";
 } else if (countb < 4) {
-    document.getElementById('circleb').style.backgroundColor = "yellow"
+    document.getElementById('circleb').style.backgroundColor = "yellow";
 } else if (countb < 5) {
-    document.getElementById('circleb').style.backgroundColor = "black"
+    document.getElementById('circleb').style.backgroundColor = "black";
 } else {
-    document.getElementById('circleb').style.backgroundColor = "green"
+    document.getElementById('circleb').style.backgroundColor = "green";
 }
 
 
-let countc = Math.floor(Math.random() * 5) + 1;
+var countc = Math.floor(Math.random() * 5) + 1;
 if (countc < 2) {
-    document.getElementById('circlec').style.backgroundColor = "red"
+    document.getElementById('circlec').style.backgroundColor = "red";
 } else if (countc < 3) {
     document.getElementById('circlec').style.backgroundColor = "white";
 } else if (countc < 4) {
-    document.getElementById('circlec').style.backgroundColor = "yellow"
+    document.getElementById('circlec').style.backgroundColor = "yellow";
 } else if (countc < 5) {
-    document.getElementById('circlec').style.backgroundColor = "black"
+    document.getElementById('circlec').style.backgroundColor = "black";
 } else {
-    document.getElementById('circlec').style.backgroundColor = "green"
+    document.getElementById('circlec').style.backgroundColor = "green";
 }
 
 
-let countd = Math.floor(Math.random() * 5) + 1;
+var countd = Math.floor(Math.random() * 5) + 1;
 if (countd < 2) {
-    document.getElementById('circled').style.backgroundColor = "red"
+    document.getElementById('circled').style.backgroundColor = "red";
 } else if (countd < 3) {
     document.getElementById('circled').style.backgroundColor = "white";
 } else if (countd < 4) {
-    document.getElementById('circled').style.backgroundColor = "yellow"
+    document.getElementById('circled').style.backgroundColor = "yellow";
 } else if (countd < 5) {
-    document.getElementById('circled').style.backgroundColor = "black"
+    document.getElementById('circled').style.backgroundColor = "black";
 } else {
-    document.getElementById('circled').style.backgroundColor = "green"
+    document.getElementById('circled').style.backgroundColor = "green";
 }
 
 
-let counte = Math.floor(Math.random() * 5) + 1;
+var counte = Math.floor(Math.random() * 5) + 1;
 if (counte < 2) {
-    document.getElementById('circlee').style.backgroundColor = "red"
+    document.getElementById('circlee').style.backgroundColor = "red";
 } else if (counte < 3) {
     document.getElementById('circlee').style.backgroundColor = "white";
 } else if (counte < 4) {
-    document.getElementById('circlee').style.backgroundColor = "yellow"
+    document.getElementById('circlee').style.backgroundColor = "yellow";
 } else if (counte < 5) {
-    document.getElementById('circlee').style.backgroundColor = "black"
+    document.getElementById('circlee').style.backgroundColor = "black";
 } else {
-    document.getElementById('circlee').style.backgroundColor = "green"
+    document.getElementById('circlee').style.backgroundColor = "green";
 }
-
-let generatedColours = [counta, countb, countc, countd, counte];
 
 // Compare generated colours with answers
 // First check all colours guessed
@@ -248,7 +244,7 @@ function checkSubmitButton() {
     checkButtone();
 
     // Have all entries been completed?
-    let completeAllEntries = 0;
+    var completeAllEntries = 0;
     if (circlea[5] == 1) {
         completeAllEntries = 1;
     } else if (circleb[5] == 1) {
@@ -261,11 +257,8 @@ function checkSubmitButton() {
         completeAllEntries = 1;
     } else completeAllEntries = 0;
 
-
-
-
-   
-    let evaluateGuesses =
+//    Are the guesses correct?
+    var evaluateGuesses =
         (coloura === counta) &&
         (colourb === countb) &&
         (colourc === countc) &&
@@ -277,14 +270,14 @@ function checkSubmitButton() {
     } else if (evaluateGuesses == true) {
         document.getElementById("allGuessesMade").innerHTML = "YOU WIN --- WELL DONE!";
     } else {
-        document.getElementById("allGuessesMade").innerHTML = "YOU LOSE! TRY AGAIN"
+        document.getElementById("allGuessesMade").innerHTML = "YOU LOSE! TRY AGAIN";
     }
     
-    
+    document.getElementById("instructions2").style.visibility = "hidden";
 }
 
 // Change visibility of greyCircles, buttons, instructions and submit button
-var displayOn = 1
+var displayOn = 1;
 function greyCircles() {
     document.getElementById('circlea').style.backgroundColor = 
     document.getElementById('circleb').style.backgroundColor = 
@@ -305,10 +298,11 @@ function greyCircles() {
     document.getElementById("instructions").style.visibility = "hidden";
     document.getElementById("instructions2").style.visibility = "visible";
 
-    // document.getElementById("allGuessesMade").innerHTML = "REMEMBER THE COLOURS";
+    document.getElementById("instructions3").style.visibility = "visible";
 
     displayOn = 0;
 }
+//  Timeout function
 setTimeout(greyCircles, 5000);
 
 
