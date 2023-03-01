@@ -24,7 +24,7 @@ The game was designed using an online wireframe which was not complicated as the
 ![Wireframe](/assets/readme_images/Colour%20Game%20Wireframe.jpg?raw=true "Wireframe") 
 
  
- 
+ **User Experience**
  
 
 **Playing The Game** 
@@ -236,6 +236,11 @@ Keeping score would involve two counters one of which is incremented when the us
  
 
 Running the game repeatedly could be done by enclosing it in a function and calling the function each time it is played. 
+
+
+Which Colours Did Appear?
+
+The game might be more fun if, after the player has been told they have got the wrong result, they are told what the sequence of colours actually was. As they are saved in an array and as variables this would be easy until the next game is started and all the variables are reset.
 
 
 
