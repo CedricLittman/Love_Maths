@@ -3,7 +3,7 @@
  
  
 
-## Colour Game 
+## Guess The Colour Game 
 
 **Introduction** 
 
@@ -11,10 +11,14 @@ The Code Institute exercise was to write an online game using HTML, CSS and Java
 
 Once the user presses the submit button a message appears telling the user whether they have guessed correctly or not or whether they have not guessed all the circles. 
 
+The game is hosted at https://cedriclittman.github.io/Colour_Guess/ and is ready to be played.
+
  
  
 
 **Wireframe** 
+
+It was required to keep the game simple and easy to use so everything had to be clear. It should be so simple to use that in the words of the old adage, as corrupted by generations of engineers excluding IKEA ones, it should be so simple that "if all else fails read the destructions".
 
 The game was designed using an online wireframe which was not complicated as the game only occupies one page which does not change size because of the game. The wireframe for the desktop display is shown below. Bootstrap will change the layout as required if the game is viewed on a different size viewport so the wireframe only applies to the desktop view of the game. 
 
@@ -25,7 +29,13 @@ The game was designed using an online wireframe which was not complicated as the
 
  
  **User Experience**
- 
+ The site is only one page which should be entirely visible on whichever screen is used to view the site. To introduce as few variables as possible Bootstrap colours were used almost throughout and care was taken to use colours that can be distinguished by people with the most common colour blindnesses. Being only a single page there is no navbar and the site could be kept simple. Running the planes alongside each other it was decided to have the submit button and messages at the top and the circles and buttons below. The circles and coloured buttons appear on a grey background to provide maximum contrast and use the least battery power when played on a battery powered device.
+
+ The buttons appear alongside the circles on large screens and Bootstrap puts them below the circles as screen size reduces.
+
+ It was decided to use a classic font to make the look of the game more appealing and, although this was not executed in the version, it would be nice to use a "better" font in a subsequent version and there is more information in the Fonts subsection of the Improvements section below.
+
+
 
 **Playing The Game** 
 
@@ -54,7 +64,27 @@ After the 5 second timeout the coloured circles turn grey, the coloured radio bu
 If a colour for each circle has not been selected then a message appears telling the player to try again, if all colours have been guessed correctly a message appears telling the player they have won and if any of the guesses were incorrect a message indicating this appears. The headline is the only part of the screen that changes and the headlines for each outcome are represented below. 
 
  
+
  
+
+Input of guesses is by Bootstrap styled radio buttons so only one guess can be made for each colour. If a guess is changed the former guess is deselected by the radio button in the usual way. Originally solid coloured radio buttons were used but it was not possible to see which had been selected so they were changed to outline buttons. I would have preferred solid buttons but their appearance made playing the game more difficult. 
+
+ 
+ 
+
+There are three possible outcomes once the submit button has been pressed, winning by guessing all the colours correctly, losing by guessing one or more of the colours incorrectly and not guessing all of the five colours. The images below show the output for each. 
+
+ 
+ 
+ 
+
+If the game is being played on a smaller viewport the buttons appear below the circles and there is a horizontal line between each set of circles and buttons. 
+
+Once the player has made their choices, they press the Submit button, and a message appears telling them they have guessed correctly or incorrectly or have not guessed for each circle. 
+
+Below are some images. 
+
+  
 
 ![Game screen - You Win](/assets/readme_images/You%20Win.PNG?raw=true "Game screen - You Win") 
 
@@ -72,24 +102,6 @@ If a colour for each circle has not been selected then a message appears telling
  
  
 
-Input of guesses is by Bootstrap styled radio buttons so only one guess can be made for each colour. If a guess is changed the former guess is deselected by the radio button in the usual way. Originally solid coloured radio buttons were used but it was not possible to see which had been selected so they were changed to outlinebuttons. I would have preferred solid buttons but their appearance made playing the game more difficult. 
-
- 
- 
-
-There are three possible outcomes once the submit button has been pressed, winning by guessing all the colours correctly, losing by guessing one or more of the colours incorrectly and not guessing all of the five colours. The images below show the output for each. 
-
- 
- 
- 
-
-If the game is being played on a smaller viewport the buttons appear below the circles and there is a horizontal line between each set of circles and buttons. 
-
-Once the player has made their choices, they press the Submit button, and a message appears telling them they have guessed correctly or incorrectly or have not guessed for each circle. 
-
-Below are some images. 
-
- 
  
  
  
@@ -191,12 +203,12 @@ The SEO results were good because the meta tags in the head were completed.
  
  
 
-As the project is composed of a single HTML page with no artwork semantic tags have not been used very extensively. There is a head section with the boilerplate HTML and other information such as title, tags for SEO indexing and getting viewport information and links to the Bootstrap and the site's own CSS. 
+Semantic HTML was used although the simplicity of the page limited its use. For example there is no navbar, no links, no images, no header and no footer. Semantic HTML was used as appropriate, however, and the code should be easier to read as a result. There is a head section with the boilerplate HTML and other information such as title, tags for SEO indexing and getting viewport information and links to the Bootstrap and the site's own CSS. 
 
  
  
 
-The body tags contain all the HTML. There general pattern of the code is that there are five similar copies, each representing one of the circles. Each of the circles is contained between a pair of div tags. Each circle consists of two components. The first is the coloured circle and the second is the set of buttons enabling the player to enter their guesses. Each of these parts is, itself, in a separate div section and there are several divs and spans inside each unit to allow the Bootstrap classes to be used and for other reasons. Variable names are descriptive and are declared in camelCase. 
+The body tags contain all the HTML. The general pattern of the code is that there are five similar copies, each representing one of the circles. Each of the circles is contained between a pair of div tags. Each circle consists of two components. The first is the coloured circle and the second is the set of buttons enabling the player to enter their guesses. Each of these parts is, itself, in a separate div section and there are several divs and spans inside each unit to allow the Bootstrap classes to be used and for other reasons. Variable names are descriptive and are declared in camelCase. 
 
  
  
@@ -211,14 +223,14 @@ The body tags contain all the HTML. There general pattern of the code is that th
 
 ## Improvements 
 
-The game could be improved quite simply with a few modifications described below. These were not implemented as there was insufficient time to research and complete them before the project deadline. Some work was done and the work required would be modest. 
+The game could be improved quite simply with a few modifications described below. These were not implemented as there was insufficient time to research and complete them before the project deadline. 
 
  
  
 
 Font 
 
-Wishing to join Massimo Vignelli's fight against ugliness I wanted to have one of the fonts he approved of. None of his six preferred fonts are available free of charge from Google fonts but some that are close are. One of the next jobs would have been to use one of one of Vignelli's fonts on the site. This would have been done in the same way as in the previous assessment with the font linked to the CSS file. 
+Wishing to join Massimo Vignelli's (a friend of Alessio) fight against ugliness I wanted to have one of the fonts he approved of. None of his six preferred fonts are available free of charge from Google fonts but some that are close are. One of the next jobs would have been to use one of one of Vignelli's fonts on the site. This would have been done in the same way as in the previous assessment with the font linked to the CSS file. 
 
  
  
@@ -243,16 +255,40 @@ Which Colours Did Appear?
 The game might be more fun if, after the player has been told they have got the wrong result, they are told what the sequence of colours actually was. As they are saved in an array and as variables this would be easy until the next game is started and all the variables are reset.
 
 
+Submit Button
+Make the Submit button disappear once after it has been pressed once. This would not change anything about the game, it might just make the screen look a little less busy when the result comes up. It would be straightforward to implement using Java Script.
+
 
 Colours
 
-There are five possible colours for each cicle and more than one ciccle can be the same colour. It might make the game more interesting if no two circles can be the same colour in each individual turn. Implementing this modification would not be difficult. One way of doing it would be to check the array of generated colours for any repats using a loop before they are displayed. If there are colours appearing more than once the random colour generator would then refill the array of circle colours. 
+There are five possible colours for each cicle and more than one ciccle can be the same colour. It might make the game more interesting if no two circles can be the same colour in each individual turn. Implementing this modification would not be difficult. One way of doing it would be to check the array of generated colours for any repeats using a loop before the circles are displayed. If there are colours appearing more than once the random colour generator would then refill the array of circle colours and it would be checkedagain for repeats prior to display. 
 
 If repeats appear too frequently then a different mechanism might be required. One way of doing this would be to check the colour array and if there are repeats then they should be replaced with colours that are not in the array.
 
 This would be involved but not complicated. There would be plenty of room for coding errors and would probably take more time than it is worth. This could be incorporated in another version of the game produced when time is not pressing so much. Only five colours were used as this worked with the Bootstrap primary colours. Introducing additional colours would be more complicated as they would need to be styled by the CSS.
 
- 
+
+
+Query Screen
+
+I was unsure what screen to present to the user while the game waited for gueses. An early attempt is the screen that is used here where the buttons appear and the circles turn grey as below.
+
+![Query Screen](/assets/readme_images/Grey%20circles.jpg?raw=true "Query Screen") 
+
+I tried putting a Bootstrap question mark icon on each of the grey circles but had trouble getting them to appear at the right time. Richey sorted it for me for the questions marks to fade in after the five seconds had elapsed which worked well. I tried to change it such that the question marks changed colour as they faded in and managed to prevent the code working at all and was unable to get back to Richey's solution. As Richey's solution looked nice it would have been a nice aspect of the game and would be worth installing in future versions.
+
+I left the links to the Bootstrap icons in the code so it would be easy to ry using them again.
+
+
+
+
+## Bugs
+One bug I did not have the time to correct was that the spacing of the message while to game was waiting for guesses was not well aligned, as in the picture below.
+
+![Badly Aligned Text](/assets/readme_images/Text%20alignment.jpg?raw=true "Badly Aligned Text") 
+
+This should not be difficult to resolve but I felt it was better to put the time elsewhere.
+
  
  
 
