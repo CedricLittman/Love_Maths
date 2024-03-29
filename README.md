@@ -7,7 +7,7 @@
 
 **Introduction** 
 
-The Code Institute exercise was to write an online game using HTML, CSS and JavaScript which was to be responsive. The game I wrote showed five coloured circles, one above the other. The circles appear for five seconds and then turn grey. As they turn grey buttons appear next to or below the circles, depending on viewport size. Each of the buttons is coloured the same as the colour it represents and the user has to click the appropriate button for each circle. 
+The project was to write an online game using HTML, CSS and JavaScript which was to be responsive. The game I wrote showed five coloured circles, one above the other. The circles appear for five seconds and then turn grey. As they turn grey buttons appear next to or below the circles, depending on viewport size. Each of the buttons is coloured the same as the colour it represents and the user has to click the appropriate button for each circle. 
 
 Once the user presses the submit button a message appears telling the user whether they have guessed correctly or not or whether they have not guessed all the circles. 
 
